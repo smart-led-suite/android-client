@@ -31,13 +31,15 @@ class ConfigurationAdapter (private val myDataset: Array<Led>) :
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
+        val ledElement = myDataset[position]
+
         val ledView: ConstraintLayout = holder.ledLayout
         println("stuff")
         ledView.getViewById(R.id.randomCheckBox).setOnClickListener{
            println("checkbox checked")
         }
         val ledName = ledView.getViewById(R.id.ledName) as TextView
-        ledName.text = "hallo huhu"
+        ledName.text = ledElement.name
     }
 
     // Return the size of your dataset (invoked by the layout manager)

@@ -3,4 +3,5 @@
     <string name="turnOnButton">TURN ON</string>
     <string name="turnOffButton">TURN OFF</string>
     <string name="configurationButton">Configuration</string>
+    <string name="configurationActivity">Configuration Editor</string>
 </resources>

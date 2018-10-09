@@ -18,7 +18,7 @@ class ConfigurationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_configuration_edit)
         viewManager = LinearLayoutManager(this)
         val basicLedObj: Led = Led("ledName", 0, 50, false)
-        val myDataset: Array<Led> = Array(5, { i -> basicLedObj })
+        val myDataset: Array<Led> = Array(100, { i -> Led("led" + i, i, 50, false) })
 
         viewAdapter = ConfigurationAdapter(myDataset)
         recyclerView = findViewById<RecyclerView>(R.id.ledOverview).apply {
